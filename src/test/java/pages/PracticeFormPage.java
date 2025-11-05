@@ -1,6 +1,9 @@
 package pages;
+
+import com.codeborne.selenide.Selenide;
 import pages.components.CalendarComponent;
 import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -99,6 +102,7 @@ public class PracticeFormPage {
     }
 
     public PracticeFormPage sendForm() {
+        Selenide.executeJavaScript("arguments[0].scrollIntoView({block:'center', behavior:'smooth'});", submitButton);
         submitButton.click();
 
         return this;
