@@ -27,7 +27,7 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
     }
     @Test
     @Description("Проверка заполнения всех полей формы_позитивная")
-    @Tag("RegressFormTest")
+    @Tag("FormTest")
     void positiveAllFormTest() {
         step("Открыть страницу регистрации", () -> {
             practiceFormPage.openPage();
@@ -64,7 +64,7 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
 
     @Test
     @Description("Проверка заполнения только обязательных полей формы_позитивная")
-    @Tag("SmokeFormTest")
+    @Tag("FormTest")
     void positiveMinimalFormTest() {
         step("Открыть страницу регистрации", () -> {
             practiceFormPage.openPage();
@@ -85,7 +85,7 @@ public class PracticeFormWithPageObjectsTests extends TestBase {
     }
     @Test
     @Description("Проверка отправки пустой формы_негативная")
-    @Tag("NegativeFormTest")
+    @Tag("FormTest")
     void NegativeFormTest() {
         step("Открыть страницу регистрации", () -> {
             practiceFormPage.openPage();

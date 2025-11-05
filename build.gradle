@@ -45,8 +45,8 @@ tasks.withType(Test) {
     }
 }
 
-task practiceForm_tests(type: Test) {
+tasks.register('form_test', Test) {
     useJUnitPlatform {
-        includeTags("RegressFormTest or SmokeFormTest or NegativeFormTest")
+        includeTags("FormTest")
     }
 }
